@@ -6,6 +6,7 @@ import productRoute from "./routers/productRouter.js";
 import { errorHandler, notFound } from "./middleware/error.js";
 import userRoute from "./routers/userRouter.js";
 import paymentRoute from "./routers/paymentRouter.js";
+import cors from "cors";
 
 
 dotenv.config();
@@ -15,6 +16,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 
 //api
