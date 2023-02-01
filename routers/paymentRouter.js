@@ -28,10 +28,10 @@ paymentRoute.post("/verification",
                                         .digest('hex');
         
         if(razorpay_signature === expectedSignature){
-            res.redirect(`https://friction-shoes.onrender.com/payment-status`);
+            res.redirect(`https://friction-shoes.netlify.app/payment-status`);
         }
         else
-            res.redirect(`https://friction-shoes.onrender.com/home`);
+            res.redirect(`https://friction-shoes.netlify.app/home`);
     }
 );
 
